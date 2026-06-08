@@ -1,0 +1,10 @@
+analyst@6eda2932c6c1:~$ echo hello
+hello
+analyst@6eda2932c6c1:~$ echo "hello"
+hello
+analyst@6eda2932c6c1:~$ echo "Jefferson"
+Jefferson
+analyst@6eda2932c6c1:~$ expr 32 - 8
+24
+analyst@6eda2932c6c1:~$ expr 3500 * 12
+42000
