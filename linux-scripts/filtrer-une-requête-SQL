@@ -1,0 +1,448 @@
+clear
+MariaDB [organization]> SELECT device_id, operating_system 
+    -> FROM machines;
++--------------+------------------+
+| device_id    | operating_system |
++--------------+------------------+
+| a184b775c707 | OS 1             |
+| a192b174c940 | OS 2             |
+| a305b818c708 | OS 3             |
+| a317b635c465 | OS 1             |
+| a320b137c219 | OS 2             |
+| a398b471c573 | OS 3             |
+| a667b270c984 | OS 1             |
+| a821b452c176 | OS 2             |
+| a998b568c863 | OS 3             |
+| b157c491d493 | OS 2             |
+| b239c825d303 | OS 1             |
+| b264c773d977 | OS 2             |
+| b265c937d713 | OS 2             |
+| b433c245d868 | OS 1             |
+| b551c837d758 | OS 3             |
+| b566c710d544 | OS 1             |
+| b806c503d354 | OS 2             |
+| b979c871d361 | OS 2             |
+| c116d593e558 | OS 3             |
+| c150d982e144 | OS 2             |
+| c185d679e493 | OS 1             |
+| c406d877e950 | OS 2             |
+| c547d140e477 | OS 2             |
+| c568d742e974 | OS 2             |
+| c597d792e215 | OS 2             |
+| c603d749e374 | OS 1             |
+| c986d200e170 | OS 2             |
+| d168e758f876 | OS 2             |
+| d280e557f635 | OS 3             |
+| d336e475f676 | OS 2             |
+| d394e816f943 | OS 3             |
+| d647e310f618 | OS 2             |
+| d693e351f221 | OS 2             |
+| d790e839f461 | OS 1             |
+| d831e972f553 | OS 1             |
+| d881e710f732 | OS 3             |
+| e113f288g203 | OS 2             |
+| e121f951g937 | OS 3             |
+| e127f591g924 | OS 3             |
+| e218f877g788 | OS 2             |
+| e281f433g404 | OS 1             |
+| e301f659g551 | OS 3             |
+| e391f189g913 | OS 3             |
+| e395f616g566 | OS 2             |
+| e782f537g683 | OS 1             |
+| f117g394h201 | OS 1             |
+| f229g533h679 | OS 2             |
+| f370g535h632 | OS 2             |
+| f419g188h578 | OS 1             |
+| f551g340h864 | OS 3             |
+| f840g812h544 | OS 1             |
+| f934g229h883 | OS 2             |
+| f951g408h866 | OS 1             |
+| f963g637h851 | OS 1             |
+| g164h566i795 | OS 1             |
+| g264h852i697 | OS 3             |
+| g299h520i457 | OS 2             |
+| g329h357i597 | OS 1             |
+| g567h376i314 | OS 3             |
+| g770h829i938 | OS 2             |
+| g773h303i639 | OS 2             |
+| g950h972i991 | OS 2             |
+| g953h643i618 | OS 2             |
+| h165i539j638 | OS 3             |
+| h174i497j413 | OS 2             |
+| h339i498j269 | OS 1             |
+| h679i515j339 | OS 3             |
+| h784i120j837 | OS 3             |
+| h832i322j795 | OS 1             |
+| h835i179j862 | OS 2             |
+| i281j129k749 | OS 3             |
+| i446j874k974 | OS 3             |
+| i671j355k725 | OS 2             |
+| i679j565k940 | OS 1             |
+| i682j513k442 | OS 3             |
+| i772j807k175 | OS 2             |
+| i858j583k571 | OS 2             |
+| j236k303l245 | OS 1             |
+| j255k281l925 | OS 3             |
+| j637k986l199 | OS 2             |
+| j713k893l832 | OS 2             |
+| j781k420l510 | OS 1             |
+| j803k645l251 | OS 2             |
+| k242l212m542 | OS 1             |
+| k367l639m697 | OS 1             |
+| k495l234m708 | OS 1             |
+| k550l533m205 | OS 3             |
+| k570l183m949 | OS 3             |
+| k865l965m233 | OS 3             |
+| k982l199m839 | OS 2             |
+| l186m618n319 | OS 1             |
+| l282m821n717 | OS 1             |
+| l358m929n154 | OS 3             |
+| l552m734n118 | OS 2             |
+| l686m140n569 | OS 3             |
+| l693m585n528 | OS 3             |
+| l738m922n515 | OS 1             |
+| l748m120n401 | OS 3             |
+| m272n572o874 | OS 3             |
+| m340n287o441 | OS 2             |
+| m674n127o823 | OS 3             |
+| m756n668o146 | OS 1             |
+| m778n920o426 | OS 2             |
+| m873n636o225 | OS 1             |
+| m891n748o375 | OS 2             |
+| n205o559p243 | OS 1             |
+| n253o917p623 | OS 1             |
+| n378o313p469 | OS 3             |
+| n428o322p522 | OS 1             |
+| n516o853p957 | OS 1             |
+| n683o758p820 | OS 2             |
+| n704o364p471 | OS 2             |
+| o156p302q359 | OS 2             |
+| o225p357q829 | OS 3             |
+| o305p208q337 | OS 3             |
+| o391p779q935 | OS 1             |
+| o678p794q957 | OS 1             |
+| o783p832q294 | OS 2             |
+| p164q780r999 | OS 3             |
+| p288q432r721 | OS 3             |
+| p611q262r945 | OS 1             |
+| p752q137r169 | OS 3             |
+| p765q957r699 | OS 2             |
+| p791q114r509 | OS 2             |
+| p834q238r776 | OS 3             |
+| p929q222r778 | OS 3             |
+| q175r338s833 | OS 3             |
+| q228r135s755 | OS 1             |
+| q308r573s459 | OS 3             |
+| q372r826s628 | OS 2             |
+| q689r187s648 | OS 2             |
+| q793r736s288 | OS 2             |
+| q912r119s313 | OS 2             |
+| r194s893t593 | OS 1             |
+| r454s225t299 | OS 2             |
+| r520s571t459 | OS 2             |
+| r537s849t690 | OS 1             |
+| r550s824t230 | OS 2             |
+| r628s557t397 | OS 1             |
+| s103t952u851 | OS 2             |
+| s310t540u653 | OS 1             |
+| s328t505u907 | OS 3             |
+| s371t911u987 | OS 1             |
+| s375t538u194 | OS 2             |
+| s429t157u159 | OS 1             |
+| s772t175u409 | OS 1             |
+| s918t412u294 | OS 3             |
+| t244u829v723 | OS 1             |
+| t363u179v368 | OS 3             |
+| t479u468v151 | OS 1             |
+| t567u844v434 | OS 3             |
+| t709u492v884 | OS 1             |
+| t801u630v138 | OS 2             |
+| t815u205v470 | OS 3             |
+| t959u687v394 | OS 2             |
+| u113v483w811 | OS 3             |
+| u340v931w764 | OS 2             |
+| u429v921w138 | OS 2             |
+| u554v512w139 | OS 1             |
+| u671v146w618 | OS 1             |
+| u849v569w521 | OS 2             |
+| u899v381w363 | OS 3             |
+| u905v920w694 | OS 1             |
+| v109w587x644 | OS 2             |
+| v135w241x773 | OS 2             |
+| v200w121x977 | OS 2             |
+| v283w690x104 | OS 1             |
+| v491w553x421 | OS 2             |
+| v691w183x928 | OS 1             |
+| v846w200x439 | OS 1             |
+| v852w513x954 | OS 2             |
+| w167x592y375 | OS 3             |
+| w190x708y760 | OS 3             |
+| w237x430y567 | OS 2             |
+| w326x611y598 | OS 1             |
+| w622x645y348 | OS 3             |
+| w981x771y326 | OS 2             |
+| w986x187y885 | OS 3             |
+| x127y181z890 | OS 2             |
+| x174y934z376 | OS 1             |
+| x253y759z103 | OS 1             |
+| x561y839z458 | OS 2             |
+| x573y883z772 | OS 1             |
+| x677y330z296 | OS 1             |
+| x701y250z303 | OS 3             |
+| y103z561a649 | OS 2             |
+| y131z211a578 | OS 2             |
+| y132z930a114 | OS 2             |
+| y246z508a775 | OS 2             |
+| y347z204a710 | OS 2             |
+| y765z123a548 | OS 2             |
+| y943z930a241 | OS 1             |
+| y976z753a267 | OS 2             |
+| z381a365b233 | OS 3             |
+| z451a308b518 | OS 2             |
+| z566a147b347 | OS 1             |
+| z654a154b259 | OS 2             |
+| z803a233b718 | OS 1             |
+| z821a946b264 | OS 3             |
+| z942a966b589 | OS 3             |
++--------------+------------------+
+200 rows in set (0.001 sec)
+
+MariaDB [organization]> SELECT device_id, operating_system 
+    -> FROM machines 
+    -> WHERE operating_system = 'OS 2';
++--------------+------------------+
+| device_id    | operating_system |
++--------------+------------------+
+| a192b174c940 | OS 2             |
+| a320b137c219 | OS 2             |
+| a821b452c176 | OS 2             |
+| b157c491d493 | OS 2             |
+| b264c773d977 | OS 2             |
+| b265c937d713 | OS 2             |
+| b806c503d354 | OS 2             |
+| b979c871d361 | OS 2             |
+| c150d982e144 | OS 2             |
+| c406d877e950 | OS 2             |
+| c547d140e477 | OS 2             |
+| c568d742e974 | OS 2             |
+| c597d792e215 | OS 2             |
+| c986d200e170 | OS 2             |
+| d168e758f876 | OS 2             |
+| d336e475f676 | OS 2             |
+| d647e310f618 | OS 2             |
+| d693e351f221 | OS 2             |
+| e113f288g203 | OS 2             |
+| e218f877g788 | OS 2             |
+| e395f616g566 | OS 2             |
+| f229g533h679 | OS 2             |
+| f370g535h632 | OS 2             |
+| f934g229h883 | OS 2             |
+| g299h520i457 | OS 2             |
+| g770h829i938 | OS 2             |
+| g773h303i639 | OS 2             |
+| g950h972i991 | OS 2             |
+| g953h643i618 | OS 2             |
+| h174i497j413 | OS 2             |
+| h835i179j862 | OS 2             |
+| i671j355k725 | OS 2             |
+| i772j807k175 | OS 2             |
+| i858j583k571 | OS 2             |
+| j637k986l199 | OS 2             |
+| j713k893l832 | OS 2             |
+| j803k645l251 | OS 2             |
+| k982l199m839 | OS 2             |
+| l552m734n118 | OS 2             |
+| m340n287o441 | OS 2             |
+| m778n920o426 | OS 2             |
+| m891n748o375 | OS 2             |
+| n683o758p820 | OS 2             |
+| n704o364p471 | OS 2             |
+| o156p302q359 | OS 2             |
+| o783p832q294 | OS 2             |
+| p765q957r699 | OS 2             |
+| p791q114r509 | OS 2             |
+| q372r826s628 | OS 2             |
+| q689r187s648 | OS 2             |
+| q793r736s288 | OS 2             |
+| q912r119s313 | OS 2             |
+| r454s225t299 | OS 2             |
+| r520s571t459 | OS 2             |
+| r550s824t230 | OS 2             |
+| s103t952u851 | OS 2             |
+| s375t538u194 | OS 2             |
+| t801u630v138 | OS 2             |
+| t959u687v394 | OS 2             |
+| u340v931w764 | OS 2             |
+| u429v921w138 | OS 2             |
+| u849v569w521 | OS 2             |
+| v109w587x644 | OS 2             |
+| v135w241x773 | OS 2             |
+| v200w121x977 | OS 2             |
+| v491w553x421 | OS 2             |
+| v852w513x954 | OS 2             |
+| w237x430y567 | OS 2             |
+| w981x771y326 | OS 2             |
+| x127y181z890 | OS 2             |
+| x561y839z458 | OS 2             |
+| y103z561a649 | OS 2             |
+| y131z211a578 | OS 2             |
+| y132z930a114 | OS 2             |
+| y246z508a775 | OS 2             |
+| y347z204a710 | OS 2             |
+| y765z123a548 | OS 2             |
+| y976z753a267 | OS 2             |
+| z451a308b518 | OS 2             |
+| z654a154b259 | OS 2             |
++--------------+------------------+
+80 rows in set (0.001 sec)
+
+MariaDB [organization]> SELECT * 
+    -> FROM employees 
+    -> WHERE department = 'Finance';
++-------------+--------------+----------+------------+-------------+
+| employee_id | device_id    | username | department | office      |
++-------------+--------------+----------+------------+-------------+
+|        1003 | d394e816f943 | sgilmore | Finance    | South-153   |
+|        1007 | h174i497j413 | wjaffrey | Finance    | North-406   |
+|        1008 | i858j583k571 | abernard | Finance    | South-170   |
+|        1010 | k242l212m542 | jlansky  | Finance    | South-109   |
+|        1015 | p611q262r945 | jsoto    | Finance    | North-271   |
+|        1017 | r550s824t230 | jclark   | Finance    | North-188   |
+|        1018 | s310t540u653 | abellmas | Finance    | North-403   |
+|        1022 | w237x430y567 | arusso   | Finance    | West-465    |
+|        1029 | d336e475f676 | ivelasco | Finance    | East-156    |
+|        1044 | s429t157u159 | tbarnes  | Finance    | West-415    |
+|        1045 | t567u844v434 | pwashing | Finance    | East-115    |
+|        1046 | u429v921w138 | daquino  | Finance    | West-280    |
+|        1047 | v109w587x644 | cward    | Finance    | West-373    |
+|        1048 | w167x592y375 | tmitchel | Finance    | South-288   |
+|        1049 | NULL         | jreckley | Finance    | Central-295 |
+|        1050 | y132z930a114 | csimmons | Finance    | North-468   |
+|        1062 | k367l639m697 | redwards | Finance    | North-180   |
+|        1069 | NULL         | jpark    | Finance    | East-110    |
+|        1076 | y347z204a710 | fgarcia  | Finance    | Central-270 |
+|        1081 | d647e310f618 | qcorbit  | Finance    | South-290   |
+|        1083 | f840g812h544 | gkoshi   | Finance    | West-165    |
+|        1099 | v283w690x104 | anaser   | Finance    | West-357    |
+|        1105 | b551c837d758 | kmei     | Finance    | Central-232 |
+|        1122 | s103t952u851 | btorres  | Finance    | West-319    |
+|        1136 | g299h520i457 | jhawes   | Finance    | West-416    |
+|        1138 | i671j355k725 | sromero  | Finance    | South-329   |
+|        1142 | m674n127o823 | lsilva   | Finance    | East-440    |
+|        1144 | NULL         | erobinso | Finance    | Central-266 |
+|        1147 | r454s225t299 | tvega    | Finance    | West-177    |
+|        1148 | s328t505u907 | dharvey  | Finance    | South-181   |
+|        1159 | d881e710f732 | jshen    | Finance    | East-193    |
+|        1164 | i682j513k442 | fsmeltz  | Finance    | North-163   |
+|        1174 | s371t911u987 | eortiz   | Finance    | North-428   |
+|        1175 | t959u687v394 | jclark2  | Finance    | North-194   |
+|        1181 | z803a233b718 | sessa    | Finance    | South-207   |
+|        1187 | f963g637h851 | bbode    | Finance    | East-351    |
+|        1188 | g164h566i795 | noshiro  | Finance    | West-252    |
+|        1195 | n516o853p957 | orainier | Finance    | East-346    |
++-------------+--------------+----------+------------+-------------+
+38 rows in set (0.001 sec)
+
+MariaDB [organization]> SELECT * 
+    -> FROM employees 
+    -> WHERE department = 'Sales';
++-------------+--------------+----------+------------+-------------+
+| employee_id | device_id    | username | department | office      |
++-------------+--------------+----------+------------+-------------+
+|        1009 | NULL         | lrodriqu | Sales      | South-134   |
+|        1011 | l748m120n401 | drosas   | Sales      | South-292   |
+|        1024 | y976z753a267 | iuduike  | Sales      | South-215   |
+|        1025 | z381a365b233 | jhill    | Sales      | North-115   |
+|        1035 | j236k303l245 | bisles   | Sales      | South-171   |
+|        1039 | n253o917p623 | cjackson | Sales      | East-378    |
+|        1041 | p929q222r778 | cgriffin | Sales      | North-208   |
+|        1057 | f370g535h632 | mscott   | Sales      | South-270   |
+|        1063 | l686m140n569 | lpope    | Sales      | East-226    |
+|        1066 | o678p794q957 | ttyrell  | Sales      | Central-444 |
+|        1071 | t244u829v723 | zdutchma | Sales      | West-348    |
+|        1072 | u905v920w694 | esmith   | Sales      | East-421    |
+|        1078 | a667b270c984 | sharley  | Sales      | North-418   |
+|        1085 | h339i498j269 | cperez   | Sales      | East-325    |
+|        1086 | i281j129k749 | lmajumda | Sales      | West-499    |
+|        1089 | l358m929n154 | jpark2   | Sales      | West-251    |
+|        1091 | n378o313p469 | rtran    | Sales      | Central-230 |
+|        1092 | o391p779q935 | lpark    | Sales      | West-227    |
+|        1098 | u671v146w618 | tarchamb | Sales      | North-423   |
+|        1107 | d168e758f876 | akajwara | Sales      | North-471   |
+|        1109 | f229g533h679 | nlocklea | Sales      | East-196    |
+|        1110 | g567h376i314 | pchaudhu | Sales      | Central-428 |
+|        1111 | h835i179j862 | jlee     | Sales      | West-309    |
+|        1116 | m272n572o874 | nzhao    | Sales      | South-100   |
+|        1117 | n683o758p820 | dahmad   | Sales      | West-405    |
+|        1118 | o305p208q337 | jpark3   | Sales      | South-329   |
+|        1119 | p164q780r999 | omubarak | Sales      | West-409    |
+|        1121 | r628s557t397 | mrojas   | Sales      | East-288    |
+|        1130 | a317b635c465 | tsnow    | Sales      | Central-451 |
+|        1169 | NULL         | mmitchel | Sales      | Central-250 |
+|        1176 | u849v569w521 | nliu     | Sales      | West-220    |
+|        1185 | d790e839f461 | revens   | Sales      | North-330   |
+|        1186 | e281f433g404 | sacosta  | Sales      | North-460   |
++-------------+--------------+----------+------------+-------------+
+33 rows in set (0.001 sec)
+
+MariaDB [organization]> SELECT * 
+    -> FROM employees 
+    -> WHERE office = 'South-109';
++-------------+--------------+----------+------------+-----------+
+| employee_id | device_id    | username | department | office    |
++-------------+--------------+----------+------------+-----------+
+|        1010 | k242l212m542 | jlansky  | Finance    | South-109 |
++-------------+--------------+----------+------------+-----------+
+1 row in set (0.001 sec)
+
+MariaDB [organization]> SELECT * 
+    -> FROM employees 
+    -> WHERE office LIKE 'South%';
++-------------+--------------+----------+------------------------+-----------+
+| employee_id | device_id    | username | department             | office    |
++-------------+--------------+----------+------------------------+-----------+
+|        1003 | d394e816f943 | sgilmore | Finance                | South-153 |
+|        1004 | e218f877g788 | eraab    | Human Resources        | South-127 |
+|        1005 | f551g340h864 | gesparza | Human Resources        | South-366 |
+|        1008 | i858j583k571 | abernard | Finance                | South-170 |
+|        1009 | NULL         | lrodriqu | Sales                  | South-134 |
+|        1010 | k242l212m542 | jlansky  | Finance                | South-109 |
+|        1011 | l748m120n401 | drosas   | Sales                  | South-292 |
+|        1013 | n205o559p243 | zbernal  | Information Technology | South-229 |
+|        1020 | u899v381w363 | arutley  | Marketing              | South-351 |
+|        1021 | v200w121x977 | smartell | Information Technology | South-138 |
+|        1024 | y976z753a267 | iuduike  | Sales                  | South-215 |
+|        1035 | j236k303l245 | bisles   | Sales                  | South-171 |
+|        1048 | w167x592y375 | tmitchel | Finance                | South-288 |
+|        1057 | f370g535h632 | mscott   | Sales                  | South-270 |
+|        1058 | g264h852i697 | madebowa | Marketing              | South-119 |
+|        1059 | h832i322j795 | jnguyen  | Marketing              | South-255 |
+|        1064 | NULL         | ejones   | Marketing              | South-477 |
+|        1081 | d647e310f618 | qcorbit  | Finance                | South-290 |
+|        1084 | g950h972i991 | nhuynh   | Human Resources        | South-155 |
+|        1090 | m891n748o375 | cpatel   | Information Technology | South-351 |
+|        1097 | t363u179v368 | jlee     | Human Resources        | South-254 |
+|        1102 | y943z930a241 | kselassi | Marketing              | South-378 |
+|        1106 | c597d792e215 | jcohen   | Marketing              | South-395 |
+|        1112 | i772j807k175 | ccruz    | Information Technology | South-298 |
+|        1116 | m272n572o874 | nzhao    | Sales                  | South-100 |
+|        1118 | o305p208q337 | jpark3   | Sales                  | South-329 |
+|        1123 | t479u468v151 | ekonya   | Human Resources        | South-445 |
+|        1125 | v491w553x421 | mrodgers | Marketing              | South-490 |
+|        1131 | b265c937d713 | asierra  | Information Technology | South-159 |
+|        1137 | h165i539j638 | mwood    | Human Resources        | South-166 |
+|        1138 | i671j355k725 | sromero  | Finance                | South-329 |
+|        1141 | l282m821n717 | cochuba  | Human Resources        | South-282 |
+|        1145 | p752q137r169 | msosa    | Human Resources        | South-345 |
+|        1148 | s328t505u907 | dharvey  | Finance                | South-181 |
+|        1149 | t709u492v884 | klim     | Information Technology | South-411 |
+|        1165 | j713k893l832 | nwords   | Marketing              | South-128 |
+|        1168 | m778n920o426 | jharris  | Information Technology | South-305 |
+|        1173 | r537s849t690 | ialcazar | Marketing              | South-429 |
+|        1181 | z803a233b718 | sessa    | Finance                | South-207 |
+|        1196 | o225p357q829 | sshah2   | Information Technology | South-385 |
+|        1198 | q308r573s459 | jmartine | Marketing              | South-117 |
++-------------+--------------+----------+------------------------+-----------+
+41 rows in set (0.001 sec)
+
+MariaDB [organization]> 
