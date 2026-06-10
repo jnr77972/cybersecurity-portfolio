@@ -1,0 +1,18 @@
+analyst@268053ad90ab:~$ ls /home/analyst
+file1.txt  file2.txt
+analyst@268053ad90ab:~$ cat file1.txt
+X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*
+analyst@268053ad90ab:~$ cat file2.txt
+X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*
+analyst@268053ad90ab:~$ sha256sum file1.txt
+131f95c51cc819465fa1797f6ccacf9d494aaaff46fa3eac73ae63ffbdfd8267  file1.txt
+analyst@268053ad90ab:~$ sha256sum file2.txt
+2558ba9a4cad1e69804ce03aa2a029526179a91a5e38cb723320e83af9ca017b  file2.txt
+analyst@268053ad90ab:~$ sha256sum file1.txt >> file1hash
+analyst@268053ad90ab:~$ sha256sum file2.txt >> file2hash
+analyst@268053ad90ab:~$ cat file1hash
+131f95c51cc819465fa1797f6ccacf9d494aaaff46fa3eac73ae63ffbdfd8267  file1.txt
+analyst@268053ad90ab:~$ cat file2hash
+2558ba9a4cad1e69804ce03aa2a029526179a91a5e38cb723320e83af9ca017b  file2.txt
+analyst@268053ad90ab:~$ cmp file1hash file2hash
+file1hash file2hash differ: char 1, line 1
